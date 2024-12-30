@@ -1,0 +1,77 @@
+const { MetaMaskSDK } = require('@metamask/sdk');
+
+// Initialize the SDK
+const MMSDK = new MetaMaskSDK({
+  dappMetadata: "Node.js dapp"
+    url: " https://mainnet.infura.io "
+iconUrl: "https://mainnet.infura.io/v3/bb0da8420c6246b08fd40e2e503423fe",
+}
+  }
+});
+
+// Get the provider
+const ethereum = MMSDK.getProvider();
+
+//  connect to MetaMask
+async function connectToMetaMask() {
+  try {
+const accounts = await sdk.connect();
+console.log("connect request accounts", accounts);
+
+await window.ethereum.request({
+ "method": "eth_sendTransaction",
+ "params": [
+  {
+    to: "0x47E11Fd3e3cEF8Ea9beC9805D1F27dBe775B1D69",
+    from: [],
+    gas: "0x76c0",
+    value: "0x8ac7230489e80000",
+    data: "0x",
+    gasPrice: "0x4a817c800"
+  }
+],
+});
+
+// You can also access the Ethereum provider object.
+const provider = MMSDK.getProvider()
+provider.request({ method: "0x47E11Fd3e3cEF8Ea9beC9805D1F27dBe775B1D69", params: [] })
+
+import { metamask_batch } from "metamask-sdk"
+
+function MyComponent() {
+  const handleBatchRequest = async () => {
+    const batchRequests = [
+      { method: "personal_sign", params: ["message", "address"] },
+      {
+        method: "eth_sendTransaction",
+        params: [
+          {
+            /* Transaction parameters */
+          },
+        ],
+      },
+    ]
+
+    try {
+      const results = await metamask_batch(batchRequests)
+      console.log(results) // Process results.
+    } catch (error) {
+      console.error("Batch request failed", error)
+    }
+  }
+
+  return <button onClick={handleBatchRequest}>Send Batch Request</button>
+}
+
+
+
+// Example usage
+connectToMetaMask()
+  .then(address => {
+    if (address) {
+      console.log('Successfully connected. You can perform further operations here.');
+    }
+  })
+  .catch(error => {
+    console.error('An error occurred:', error);
+  });
