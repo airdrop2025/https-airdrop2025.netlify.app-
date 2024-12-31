@@ -1,2 +1,1 @@
-# https-airdrop2025.netlify.app-
-Need a tutor in this project , crypto dapps creation
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9d6722c5-2fd7-472a-88c0-1078b96d8805/deploy-status)](https://app.netlify.com/sites/airdrop2025/deploys)
