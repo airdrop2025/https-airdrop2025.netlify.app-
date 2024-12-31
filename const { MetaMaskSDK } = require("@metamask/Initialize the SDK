@@ -1,0 +1,8 @@
+// Initialize the SDK
+const MMSDK = new MetaMaskSDK({
+  dappMetadata: {
+    name: "Node.js dapp",
+    url: "https://developer.metamask.io"
+  },
+  infuraAPIKey: "bb0da8420c6246b08fd40e2e503423fe"
+});
