@@ -1,1 +1,1 @@
-cd mmsdk-wagmi
+cd mmsdk-wagmicd mmsdk-wagmi && npm install
